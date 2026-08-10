@@ -2,9 +2,9 @@ import { Instagram, MessageCircle, Mail } from "lucide-react"
 import Logo from "./Logo"
 
 const socials = [
-  { label: "Instagram", href: "https://instagram.com", icon: Instagram },
-  { label: "WhatsApp", href: "https://wa.me/6281234567890", icon: MessageCircle },
-  { label: "Email", href: "mailto:halo@foodmaster.id", icon: Mail },
+  { label: "Instagram", href: "https://instagram.com/byfoodmaster", icon: Instagram },
+  { label: "WhatsApp", href: "https://wa.me/6281252331733", icon: MessageCircle },
+  { label: "Email", href: "mailto:cs@byfoodmaster.com", icon: Mail },
 ]
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <Logo />
           <p className="mt-3 text-sm text-ink-soft">
-            &copy; 2026 FoodMaster. Semua hak dilindungi.
+            &copy; 2026 FoodMaster. All rights reserved.
           </p>
         </div>
 
