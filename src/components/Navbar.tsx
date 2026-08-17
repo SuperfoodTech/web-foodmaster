@@ -1,12 +1,12 @@
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
 import Logo from "./Logo"
 
 const links = [
   { label: "Beranda", href: "#beranda" },
   { label: "Layanan", href: "#layanan" },
   { label: "Cara Kerja", href: "#cara-kerja" },
-  { label: "Tentang Kami", href: "#tentang" },
+  { label: "Tentang FoodMaster", href: "#tentang" },
 ]
 
 export default function Navbar() {
@@ -31,8 +31,9 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark md:inline-block"
+          className="hidden items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark md:inline-flex"
         >
+          <Phone className="h-4 w-4" />
           Hubungi Kami
         </a>
 
@@ -63,8 +64,9 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-1 rounded-full bg-brand px-5 py-2.5 text-center text-sm font-semibold text-white"
+              className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white"
             >
+              <Phone className="h-4 w-4" />
               Hubungi Kami
             </a>
           </nav>
