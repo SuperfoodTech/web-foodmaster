@@ -1,18 +1,41 @@
-import { UtensilsCrossed } from "lucide-react"
-
 const platforms = [
-  { name: "GoFood", color: "text-red-600", bg: "bg-red-50" },
-  { name: "GrabFood", color: "text-green-600", bg: "bg-green-50" },
-  { name: "ShopeeFood", color: "text-orange-600", bg: "bg-orange-50" },
+  {
+    name: "GoFood",
+    logo: "/images/platforms/gofood.png",
+    glow: "from-red-500/20 via-red-100 to-white",
+    ring: "ring-red-200",
+  },
+  {
+    name: "GrabFood",
+    logo: "/images/platforms/grabfood.png",
+    glow: "from-green-500/20 via-green-100 to-white",
+    ring: "ring-green-200",
+  },
+  {
+    name: "ShopeeFood",
+    logo: "/images/platforms/shopeefood.png",
+    glow: "from-orange-500/20 via-orange-100 to-white",
+    ring: "ring-orange-200",
+  },
 ]
 
 export default function Platforms() {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-[1200px] px-5 py-16 md:py-20">
+    <section className="relative overflow-hidden bg-white">
+      <div
+        className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-brand/10 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -right-16 bottom-0 h-64 w-64 rounded-full bg-accent/20 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto max-w-[1200px] px-5 py-16 md:py-20">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-extrabold tracking-tight text-ink text-balance md:text-3xl">
-            Kelola semua platform online dari satu tim
+            Kelola semua platform online{" "}
+            <span className="text-brand">Bersama FoodMaster</span>
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-ink-soft">
             FoodMaster membantu mengelola akun restomu di berbagai platform
@@ -24,20 +47,18 @@ export default function Platforms() {
           {platforms.map((p) => (
             <div
               key={p.name}
-              className="flex flex-col items-center gap-3 rounded-2xl border border-black/5 bg-white p-6 text-center shadow-sm"
+              className={`relative flex min-h-[200px] items-center justify-center overflow-hidden rounded-t-[2.75rem] rounded-b-3xl bg-gradient-to-b ${p.glow} p-5 shadow-sm ring-1 ${p.ring}`}
             >
-              <span className={`flex h-14 w-14 items-center justify-center rounded-full ${p.bg} ${p.color}`}>
-                <UtensilsCrossed className="h-7 w-7" />
-              </span>
-              <span className="text-base font-bold text-ink">{p.name}</span>
+              <div className="relative z-10 flex aspect-square w-[7.5rem] items-center justify-center overflow-hidden rounded-t-[2.25rem] rounded-b-2xl bg-white p-2 shadow-sm">
+                <img
+                  src={p.logo}
+                  alt={`Logo ${p.name}`}
+                  className="h-full w-full object-contain"
+                />
+              </div>
             </div>
           ))}
         </div>
-
-        <p className="mt-6 text-center text-xs text-ink-soft">
-          Nama platform digunakan untuk tujuan informasi. FoodMaster bukan mitra
-          resmi platform tersebut.
-        </p>
       </div>
     </section>
   )

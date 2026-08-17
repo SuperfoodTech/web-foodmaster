@@ -1,10 +1,12 @@
 import { Instagram, MessageCircle, Mail } from "lucide-react"
 import Logo from "./Logo"
 
+const WA_LINK = "https://wa.me/6285183151531"
+
 const socials = [
   { label: "Instagram", href: "https://instagram.com/byfoodmaster", icon: Instagram },
-  { label: "WhatsApp", href: "https://wa.me/6281252331733", icon: MessageCircle },
-  { label: "Email", href: "mailto:cs@byfoodmaster.com", icon: Mail },
+  { label: "WhatsApp", href: WA_LINK, icon: MessageCircle },
+  { label: "Email", href: "mailto:hi@byfoodmaster.com", icon: Mail },
 ]
 
 export default function Footer() {

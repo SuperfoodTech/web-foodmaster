@@ -1,5 +1,7 @@
 import { Target, ArrowRight } from "lucide-react"
 
+const WA_LINK = "https://wa.me/6285183151531"
+
 export default function FinalCTA() {
   return (
     <section id="contact" className="scroll-mt-20 bg-white">
@@ -12,14 +14,16 @@ export default function FinalCTA() {
             Fokus pada Restomu. Biar FoodMaster Mengurus Online-nya.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/85">
-            Tingkatkan pengelolaan penjualan online tanpa harus membangun tim
-            sendiri.
+            Sudah dipercaya 80+ outlet di Surabaya, Sidoarjo, Malang, dan
+            Jakarta. Konsultasi gratis, tanpa komitmen di awal.
           </p>
           <a
-            href="#contact"
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-bold text-brand transition-colors hover:bg-accent-light"
           >
-            Konsultasi Gratis
+            Konsultasi Gratis via WhatsApp
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>
